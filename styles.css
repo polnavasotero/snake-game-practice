@@ -1,0 +1,52 @@
+*{
+    font-family: 'Share Tech Mono', monospace; /*fallback de fuente, fallback font*/
+}
+
+#board, .boardInfo{ /*ancho maximo info y tablero, fixed width to the board and info related to the board*/
+    max-width: 500px;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);/*repeat 10 elements and add a value of 1 to each one of the columns so 10 columns in total*/
+}
+
+#start, .boardInfo{
+        font-size: 25px;
+}
+
+#gameOver{
+    display: none; /*because the game is not ending yet display true when the game really ends*/
+}
+
+.boardInfo{ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#start{
+    background-color: #f35a69;
+    border: none;
+    color: white;
+}
+
+#scoreBoard{ /*inline-flex so the total shows on the side*/
+    display: inline-flex; 
+}
+
+.square{ /*maitain the aspect ratio to 1 to each of all the squares forming the board so they have an square shape, generated with js*/
+    aspect-ratio: 1;
+}
+
+.emptySquare{ /*styles to each type of square, empty square no content*/
+    background-color: #456990;
+}
+
+.snakeSquare{ /*styles to each type of square, where the snake will be filling the square space*/
+    background-color: #ccf47f;
+}
+
+.foodSquare{ /*styles to each type of square, where the food will be placed in the square randomly*/
+    background-color: #f35a69;
+}  
